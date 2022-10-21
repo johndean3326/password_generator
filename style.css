@@ -13,8 +13,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #0c0a07;
 }
 
 .wrapper {
@@ -27,16 +27,17 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(27, 97%, 49%);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(325, 78%, 14%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(130, 94%, 25%);
   font-size: 18px;
+  text-align: center;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
@@ -46,12 +47,14 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #810b0b;
   height: 2px;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-body {
-  min-height: 100px;
+  min-height: 100px;  
 }
 
 .card-footer {
@@ -62,7 +65,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #cc2e07;
   height: 2px;
 }
 
@@ -76,21 +79,21 @@ header {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  box-shadow: rgba(38, 184, 70, 0.1) 0px 1px 6px 0px rgba(13, 129, 158, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(101, 88%, 27%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
-  text-align: center;
+  text-align: justify;
   cursor: pointer;
 }
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #38a008;
 }
 
 .float-right {
@@ -108,14 +111,16 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
+  text-decoration-color: #28e451;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px solid #099734;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  background-color: #099734;
 }
 
 @media (max-width: 690px) {
@@ -123,15 +128,18 @@ button[disabled] {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
+   
   }
 
   #password {
     font-size: 1rem;
+    
   }
 }
 
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+    
   }
 }
