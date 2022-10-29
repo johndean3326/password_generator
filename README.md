@@ -39,8 +39,6 @@ I have created a Halloween themed password generator, since the due date is Hall
 
 ## Review
 
-
-
 * The URL of the GitHub repository, with a unique name and a readme describing the project.
  ### [@Link to Github]https://github.com/johndean3326/password_generator
 
