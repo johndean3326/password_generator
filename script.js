@@ -9,14 +9,14 @@ function randomNumber(min, max) {
  var rand = Math.random()
   return Math.floor(min*(1 - rand) + rand*max)
 }
-
+// Establishes my random number minimum and maximum 
 function getOption(list) {
   return list[randomNumber(list.length)]
 
 } 
 
 function generatePassword() {
-
+// generate window prompts for recieving inputs
   while  (true) {
 
   var input  = window.prompt("NUMBER OF CHARACTERS?")
@@ -25,7 +25,7 @@ function generatePassword() {
   }
 
   var length = parseInt(input)
-
+// confirmation of applicaple inputs
   if (isNaN(length)) {
     window.alert("NOT A NUMBER")
 }    else if (length < 8 || length > 128) {
@@ -35,7 +35,7 @@ function generatePassword() {
     } 
 
   }
-
+// Establishing applicaple inputs
   var symbols = window.confirm("INCLUDE SYMBOLS?")
   var numbers = window.confirm("INCLUDE NUMBERS?")
   var uppercase = window.confirm("INCLUDE UPPERCASE?")
@@ -45,7 +45,7 @@ function generatePassword() {
   var numberOption = ["0, 1, 2, 3, 4, 5, 6, 7, 8, 9,"]
   var lowercaseOption = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"]
   var uppercaseOption = []
-
+//  Creating for loop to collect the data and push the requested characters
   var option = []
 
   for (var i = 0; i < lowercaseOption.length; i++) {
@@ -75,16 +75,16 @@ function generatePassword() {
     console.log(option)
 
   var generatedPassword = ""
-
+// trying to create randomized password... feeling like my problem might be below.
   for (var i =0; i < length; i++) {
     var passwordOption = getOption(option)
     var passwordChar = getOption(passwordOption)
-  generatedPassword += passwordChar  
+  // generatedPassword += passwordChar  
 }
 
 return generatedPassword
 }  
-
+// Unchanged code below.
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
