@@ -1,16 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function randomNumber(min, max) {
- if (!max) {
-  max = min
-  min = 0
- }
+function randomNumber(password_length) {
+// Establishes my password length
  var rand = Math.random()
-  return Math.floor(min*(1 - rand) + rand*max)
+  return Math.floor(rand*password_length)
 }
-// Establishes my random number minimum and maximum 
+
 function getOption(list) {
+console.log (randomNumber(list.length))
   return list[randomNumber(list.length)]
 
 } 
@@ -35,17 +33,18 @@ function generatePassword() {
     } 
 
   }
-// Establishing applicaple inputs
+// pushing the window to confirm parameters for generating password.
   var symbols = window.confirm("INCLUDE SYMBOLS?")
   var numbers = window.confirm("INCLUDE NUMBERS?")
   var uppercase = window.confirm("INCLUDE UPPERCASE?")
   var lowercase = window.confirm("INCLUDE LOWERCASE?")  
-
-  var symbolOption = ["!, @, #, $, %, ^, &, *, +"]
-  var numberOption = ["0, 1, 2, 3, 4, 5, 6, 7, 8, 9,"]
-  var lowercaseOption = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"]
+//available charaters to select from
+  var symbolOption = ["!","@","#","$","%","^","&","*","+"]
+  var numberOption = ["0","1","2","3","4","5","6","7","8","9"]
+  var lowercaseOption = ["a","b","c","d"]
   var uppercaseOption = []
-//  Creating for loop to collect the data and push the requested characters
+//  Creating for loop to collect the data and push the requested characters. (during a debug session with my tutor
+// he discussed the .concat option of breaking down my arrays into a single array to then have selected the characters from that array)
   var option = []
 
   for (var i = 0; i < lowercaseOption.length; i++) {
@@ -53,33 +52,36 @@ function generatePassword() {
 }
 
     if (symbols === true) {
-     option.push(symbolOption)
+   
+    option=option.concat(symbolOption)
     }
 
     if (numbers === true) {
-     option.push(numberOption)
+      option=option.concat(numberOption)
     }
 
     if (lowercase === true) {
-     option.push(lowercaseOption)
+      option=option.concat(lowercaseOption)
     }
 
     if (uppercase === true) {
-      option.push(uppercaseOption)
+      option=option.concat(uppercaseOption)
     }
 
     if (option.length === 0) {
-    option.push(lowercaseOption)
+      option=option.concat(lowercaseOption)
     }
 
     console.log(option)
+    console.log(typeof option)
 
   var generatedPassword = ""
-// trying to create randomized password... feeling like my problem might be below.
+// now returning the randomly generated characters conforming to the paramaters the user has selected.
   for (var i =0; i < length; i++) {
     var passwordOption = getOption(option)
-    var passwordChar = getOption(passwordOption)
-  // generatedPassword += passwordChar  
+    console.log(passwordOption)
+    
+   generatedPassword += passwordOption
 }
 
 return generatedPassword
